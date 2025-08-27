@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>随借备用金</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+	
+		<script src="https://res.weikelink.com/commonJs/wk-common.js" id="WEIKEJS" key="cqxPEu"  urlTypeId="3"></script>
+		<!-- 预加载关键图片 -->
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/ae0b91eb-852b-4400-8923-40d0881f1930" as="image">
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/50b407ee-c095-47ae-8b04-047221713a6a" as="image">
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/3f0362d1-f1bf-4f65-bc9f-cdb063eb43fa" as="image">
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/e990f086-8eec-41ff-b192-a15f47a613de" as="image">
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/de26ed08-d9fd-4bd0-9dbc-7e175171859d" as="image">
+		<link rel="preload" href="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/449e4324-8780-44f0-87dd-f773060c74a2" as="image">
+	</head>
+
+	<body>
+		<!-- 返回按钮 -->
+		<div class="back-button" id="backBtn">
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+				<path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</div>
+		
+		<div class="header">
+			<div class="header-top">
+				<div class="logo-container">
+					<img src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/ae0b91eb-852b-4400-8923-40d0881f1930" alt="logo" id="logoImg">
+				</div>
+				<h5>随借备用金</h5>
+			</div>
+			<div class="header-desc">持牌机构，100万+用户的选择</div>
+
+			<div class="banner">
+				<img src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/50b407ee-c095-47ae-8b04-047221713a6a" alt="logo">
+				<div class="banner-text-container">
+					<div class="banner-text" id="bannerText">
+						<!-- 动态生成的内容 -->
+					</div>
+				</div>
+			</div>
+			<div class="amount-box">
+				<p>最高可借额度（元）</p>
+				<div class="amount-flex">
+					<div class="amount">200,000</div>
+					<a href="#" class="btn" id="activateBtn">
+						<span class="button-text">激活额度</span>
+						<div class="loading-content" style="display: none;">
+							<div class="loading-spinner"></div>
+							<span class="loading-text">加载中...</span>
+						</div>
+					</a>
+				</div>
+				<div class="rate-desc">年化利率（单利）7.2-24%，1万借1天利息低至2元</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="process">
+				<h3>办理流程</h3>
+				<div class="process-list">
+					<div class="process-item">
+						<img src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/3f0362d1-f1bf-4f65-bc9f-cdb063eb43fa" alt="身份认证">
+						<p>身份认证</p>
+					</div>
+					<img class="lineimg" src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/449e4324-8780-44f0-87dd-f773060c74a2" alt="" />
+					<div class="process-item">
+						<img src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/e990f086-8eec-41ff-b192-a15f47a613de" alt="资质初评估">
+						<p>资质初评估</p>
+					</div>
+					<img class="lineimg" src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/449e4324-8780-44f0-87dd-f773060c74a2" alt="" />
+					<div class="process-item">
+						<img src="https://ml-mini.oss-cn-hangzhou.aliyuncs.com/2025/08/26/de26ed08-d9fd-4bd0-9dbc-7e175171859d" alt="获得额度">
+						<p>获得额度</p>
+					</div>
+				</div>
+			</div>
+			<div class="tip">
+				<p>贷款有风险，借款需谨慎</p>
+				<p>请根据个人能力合理贷款，理性消费，避免逾期</p>
+				<p>贷款额度、放款时间以实际审批结果为准</p>
+				<p>年化利率7.2%-24%（单利），具体以实际审核结果为准</p>
+				<p>本品平台以开放融合稳定为价值观，依托互联网为广大小微企业与个人用户提供创新性多元化的品质金融服务</p>
+				<div class="disclaimer-item">北京众知非凡科技有限公司</div>
+				<div class="disclaimer-item">
+					<span>京ICP备2025132147号-1</span>
+					<span>|</span>
+					<span "="">电话：19357698687</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 弹框 -->
+		<div class="popup-overlay" id="popupOverlay" style="display: none;">
+			<div class="popup-content">
+				<div class="popup-header">
+					<h3>确定要离开吗？</h3>
+					<span class="popup-close" id="popupCloseBtn">×</span>
+				</div>
+				<div class="popup-body">
+					<p>您即将错过最高200,000元的贷款额度</p>
+					<p>年化利率低至7.2%，1万借1天利息仅2元</p>
+					<p class="countdown-text">
+						<span id="countdownNumber">3</span>秒后自动领取
+					</p>
+				</div>
+				<div class="popup-footer">
+					<button class="popup-btn secondary" onclick="hidePopup()">确定离开</button>
+					<button class="popup-btn primary" id="popupButton">立即领取</button>
+				</div>
+			</div>
+		</div>
+		
+		<script src="script.js"></script>
+	</body>
+
+</html>
