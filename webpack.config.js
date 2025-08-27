@@ -52,11 +52,6 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'public/404.html'),
           to: path.resolve(__dirname, 'dist/404.html')
-        },
-        {
-          from: path.resolve(__dirname, 'public/.nojekyll'),
-          to: path.resolve(__dirname, 'dist/.nojekyll'),
-          noErrorOnMissing: true
         }
       ]
     }),

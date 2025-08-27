@@ -15,6 +15,9 @@
           <li class="nav-item">
             <router-link to="/original-colSbj" class="nav-link" @click="closeMenu">New-ColSbj (原始版)</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/test" class="nav-link" @click="closeMenu">🧪 测试</router-link>
+          </li>
         </ul>
         <div class="nav-toggle" @click="toggleMenu">
           <span class="bar"></span>

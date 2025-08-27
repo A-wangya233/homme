@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import NewColSbj from '../views/NewColSbj.vue'
+import Test from '../views/Test.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,11 @@ const routes = [
       const baseUrl = process.env.NODE_ENV === 'production' ? '/homme/' : '/'
       window.location.href = baseUrl + 'new-colSbj/index.html'
     }
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   }
 ]
 
